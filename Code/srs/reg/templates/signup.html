@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+<title>Login-Signup</title>
+{% load staticfiles %}
+<link rel="icon" href="{% static 'images/logo.png' %}" type="images/png" />
+<!--css-->
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!--<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />-->
+<link rel="stylesheet" href="{% static 'css/ken-burns.css' %}" type="text/css" media="all" />
+<link rel="stylesheet" href="{% static 'css/animate.min.css' %}" type="text/css" media="all" />
+<!--css-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Studies Plus Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--js-->
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- For-Mobile-Apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Multi Login & Signup Form Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //For-Mobile-Apps -->
+
+<!--  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> -->
+
+<!-- Web-Fonts -->
+<!--
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+-->
+<!-- //Web-Fonts -->
+
+<!-- Horizontal-Tabs-JavaScript -->
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#horizontalTab').easyResponsiveTabs({
+			type: 'default', //Types: default, vertical, accordion           
+			width: 'auto', //auto or any width like 600px
+			fit: true, // 100% fit in a container
+		});
+	});
+</script>
+<!-- Horizontal-Tabs-JavaScript -->
+
+<style type="text/css">
+	
+
+	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+	article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+	ol,ul{list-style:none;margin:0px;padding:0px;}
+	blockquote,q{quotes:none;}
+	blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+	table{border-collapse:collapse;border-spacing:0;}
+	/* start editing from here */
+	a{text-decoration:none;}
+	.txt-rt{text-align:right;}/* text align right */
+	.txt-lt{text-align:left;}/* text align left */
+	.txt-center{text-align:center;}/* text align center */
+	.float-rt{float:right;}/* float right */
+	.float-lt{float:left;}/* float left */
+	.clear{clear:both;}/* clear float */
+	.pos-relative{position:relative;}/* Position Relative */
+	.pos-absolute{position:absolute;}/* Position Absolute */
+	.vertical-base{vertical-align:baseline;}/* vertical align baseline */
+	.vertical-top{vertical-align:top;}/* vertical align top */
+	nav.vertical ul li{display:block;}/* vertical menu */
+	nav.horizontal ul li{display: inline-block;}/* horizontal menu */
+	img{max-width:100%;}
+
+/*-- //Reset-Code --*/
+
+
+
+
+
+/*-- Index-Page-Styllng --*/
+
+
+
+/*-- Body --*/
+
+body {
+	/*background-color: #003466;*/
+	/*background-color: #43536a;*/
+	background-color: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body a {
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+
+input[type="button"], input[type="submit"] {
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+}
+
+::-webkit-input-placeholder {
+	color: #EEE;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+	color: #EEE;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+	color: #EEE;
+}
+
+:-ms-input-placeholder {
+	color: #EEE;
+}
+
+/*-- //Body --*/
+/*   #e77c13 - orange 	#43536a*/
+
+.header {
+    background: #43536a;
+    padding-bottom: 1.5em;
+}
+.header-top {
+     padding: 1em 0;
+    background: #2e353f;
+}
+
+h3.tittlenew {
+  font-size: 2.5em;
+    color: #fff;
+    text-align: center;
+  
+} 
+
+/*-- Heading --*/
+
+h1 {
+	color: #FFF;
+	text-align: center;
+	font-size: 35px;
+	margin-top: 10px;
+
+	letter-spacing: 0px;
+}
+
+/*-- //Heading --*/
+
+body, html {
+  height:100%;
+	background:  #43536a;
+  	overflow-x: hidden;
+	font-family: 'Open Sans', sans-serif;
+}
+
+btn {
+	border-radius: 0
+
+  
+}
+.btn:focus, .btn:active, .btn.active, .btn:active:focus {
+	outline: 0;
+  border-radius: 0
+}
+
+
+
+.btn-larger {
+	padding: 10px 30px !important;
+	border:2px solid #e77c13 !important;;
+	border-radius: 0px !important;;
+	
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	color: #e77c13;
+	background-color: transparent;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+  
+
+}
+.btn-larger:hover, .btn-larger:focus, .btn-larger:active, .btn-larger.active, .open .dropdown-toggle.btn-larger {
+	border-color: #e77c13;
+	color: #fff;
+	background-color: #e77c13;
+  border-radius: 0
+}
+.btn-larger:active, .btn-larger.active, .open .dropdown-toggle.btn-larger {
+	background-image: none;
+}
+.btn-larger.disabled, .btn-larger[disabled], fieldset[disabled] .btn-larger, .btn-larger.disabled:hover, .btn-larger[disabled]:hover, fieldset[disabled] .btn-larger:hover, .btn-larger.disabled:focus, .btn-larger[disabled]:focus, fieldset[disabled] .btn-larger:focus, .btn-larger.disabled:active, .btn-larger[disabled]:active, fieldset[disabled] .btn-larger:active, .btn-larger.disabled.active, .btn-larger[disabled].active, fieldset[disabled] .btn-larger.active {
+	border-color: #AEA8D3;
+	background-color: #AEA8D3;
+}
+.btn-larger .badge {
+	color: #AEA8D3;
+	background-color: #fff;
+}
+
+div#form {
+	color: #fff;
+	background-attachment: scroll;
+	background: #1c1e21 url({% static 'images/banner1.jpg' %});
+	background-position: center center;
+	background-repeat: none;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+    min-height:70%;
+
+}
+
+#userform p {
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+#userform ul {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 0px;
+}
+#userform {
+	background: rgba(0,0,0,0.8);
+	margin: 20px 0 20px 0
+}
+ @media (min-width: 768px) {
+#userform {
+	background: rgba(0,0,0,0.8);
+	margin: 40px 0 30px 0
+}
+}
+#userform .nav-tabs.nav-justified > li > a {
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #e77c13;
+	background-color: rgba(90,90,90,0.5);
+}
+#userform .nav-tabs.nav-justified > .active > a, #userform .nav-tabs.nav-justified > .active > a:hover, #userform .nav-tabs.nav-justified > .active > a:focus {
+	border: 0;
+	background: #e77c13;
+	color: white;
+	border-radius: 0;
+}
+#userform .nav-justified > li > a {
+	margin-bottom: 0;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+#userform .nav-justified > li > a:hover {
+	background: #AEA8D3;
+	color: #FFF;
+}
+#userform .nav-tabs > li > a {
+	border: 0px solid transparent;
+	border-radius: 0
+}
+#userform .nav-tabs.nav-justified > li > a:hover {
+	background: #e77c13;
+	color: #FFF;
+	border-radius: 0;
+	border: 0;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+#userform .nav-tabs > li.active > a, #userform .nav-tabs > li.active > a:hover, #userform .nav-tabs > li.active > a:focus {
+	color: #e77c13;
+	cursor: default;
+	background-color: transparent;
+	border: 0;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+ @media (min-width: 768px) {
+#userform .nav-tabs.nav-justified > li > a {
+	border: 0;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+#userform .nav-tabs.nav-justified > li > a:hover {
+	background-color: #e77c13;
+	border-color: transparent;
+	border: 0;
+	-webkit-transition: all .6s;
+	-moz-transition: all .6s;
+	transition: all .6s;
+}
+}
+ @media (max-width: 768px) {
+.nav-justified > li {
+	display: table-cell !important;
+	width: 1% !important;
+}
+}
+#userform .nav-tabs {
+	border-bottom: 0px solid #ddd;
+}
+#userform .tab-pane h2 {
+	margin: 10px 0;
+	color: #FFF;
+}
+#userform .tab-pane p.lead {
+	margin-top: 20px;
+}
+#userform .tab-content {
+	padding: 20px
+}
+#userform .form-group {
+	margin-bottom: 0px;
+	color: #FFF;
+}
+#userform .form-group input, #userform .form-group textarea {
+	padding: 10px;
+}
+#userform .form-group input.form-control {
+	height: auto;
+	background-color: rgba(237, 235, 250, 0.1);
+	color: #FFF;
+}
+#userform .form-control {
+	border-radius: 0;
+	border: 1px solid #fff;
+}
+#userform .form-control:focus {
+	border-color: #e77c13;
+	box-shadow: none;
+}
+ #userform::-webkit-input-placeholder {
+ text-transform: uppercase;
+font-family: 'Dosis', sans-serif;
+font-weight: 700;
+ color: #bbb;
+}
+#userform #signup .form-group label {
+	position: relative;
+	-webkit-transform: translateY(35px);
+	-ms-transform: translateY(35px);
+	transform: translateY(35px);
+	left: 10px;
+	top: 0px;
+	color: rgba(255, 255, 255, 0.5);
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+	-webkit-backface-visibility: hidden;
+	pointer-events: none;
+	font-size: 12px;
+	font-weight: 300
+}
+#userform #signup .form-group label .req {
+	margin: 2px;
+	color: #e77c13;
+}
+#userform #signup .form-group label.active {
+	-webkit-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	left: 2px;
+	font-size: 12px;
+}
+#userform #signup .form-group label.active .req {
+	opacity: 0;
+}
+#userform label.highlight {
+	color: #ffffff;
+}
+#userform #login .form-group label {
+	position: relative;
+	-webkit-transform: translateY(35px);
+	-ms-transform: translateY(35px);
+	transform: translateY(35px);
+	left: 10px;
+	top: 0px;
+	color: rgba(255, 255, 255, 0.5);
+	-webkit-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+	-webkit-backface-visibility: hidden;
+	pointer-events: none;
+	font-size: 12px;
+	font-weight: 300
+}
+#userform #login .form-group label .req {
+	margin: 2px;
+	color: #e77c13;
+}
+#userform #login .form-group label.active {
+	-webkit-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	transform: translateY(0px);
+	left: 2px;
+	font-size: 12px;
+}
+#userform #login .form-group label.active .req {
+	opacity: 0;
+}
+
+.mrgn-30-top {
+	margin-top: 30px;
+	margin-bottom: 15px;
+}
+
+
+
+/*-- Container --*/
+
+
+
+/* footer */
+
+.footer {
+	background-color: #43536a;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+
+.copyright p {
+	color: #FFFFFF;
+	font-size: 14px;
+	letter-spacing: 2px;
+}
+
+.copyright a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.copyright a:hover{
+	color: #FFFFFF;
+}
+
+
+
+
+</style>
+
+
+
+</head>
+<!-- Head -->
+
+<!-- Body -->
+<body>
+
+	<!-- Heading -->
+	<div class="header">
+		<img src="{% static 'images/header.png' %}" alt="" class="img-responsive" />
+		<h1>Registration System</h1>
+	</div>
+	<!-- //Headng -->
+	
+	<!-- Container -->
+	<div id="form">
+  <div class="container">
+
+    
+    <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-md-8 col-md-offset-2">
+
+      <div id="userform">
+
+        <ul class="nav nav-tabs nav-justified" role="tablist">
+          <li class="active"><a href="#signup"  role="tab" data-toggle="tab">Sign up</a></li>
+
+          
+        </ul>
+
+        <div class="tab-content">
+
+          <div class="tab-pane fade active in" id="signup">
+            <h2 class="text-uppercase text-center"> A new Applicant? Sign in Here</h2>
+
+            {% for message in messages %}
+
+                    <div class="alert alert-success">
+                        <a class="close" href="#" data-dismiss="alert">×</a>
+
+                        {{ message }}
+
+                    </div>
+            {% endfor %}
+            <form id="signup" method="post">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <label>First Name<span class="req">*</span> </label>
+                    <input type="text" class="form-control" id="first_name" name="firstusrname" required data-validation-required-message="Please enter your name." autocomplete="off">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <label> Last Name<span class="req">*</span> </label>
+                    <input type="text" class="form-control" id="last_name" name="lastusrname" required data-validation-required-message="Please enter your name." autocomplete="off">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label> Your Email<span class="req">*</span> </label>
+                <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address." autocomplete="off">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <label> Password<span class="req">*</span> </label>
+                <input type="password" class="form-control" id="password" name="pass" required data-validation-required-message="Please enter your password" autocomplete="off">
+                <p class="help-block text-danger"></p>
+              </div>
+              
+              <div class="form-group">
+                <label> Your Phone<span class="req">*</span> </label>
+                <input type="tel" class="form-control" id="phone" name="tel" required data-validation-required-message="Please enter your phone number." autocomplete="off">
+                <p class="help-block text-danger"></p>
+              </div>
+              
+              <div class="row mrgn-30-top">
+              	<div class="col-sm-6">
+                <button type="submit" class="btn btn-larger btn-block"/>
+                Sign up
+                </button>
+                </div>
+
+           		<div class="col-sm-6">
+
+               <a style="color: inherit;" href = "{% url 'login_view' %}"><button type="button" class="btn btn-larger btn-block">Login</button></a>
+           		</div>
+
+              </div>
+              <a style="color: inherit;" href = "{% url 'index' %}"><button type="button" class="btn btn-larger btn-block">Back to Home</button></a>
+              {% csrf_token %}
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.container --> 
+</div>
+	<!-- //Container -->
+<script type="text/javascript">
+	
+	$('#form').find('input, textarea').on('keyup blur focus', function (e) {
+  
+  var $this = $(this),
+      label = $this.prev('label');
+
+	  if (e.type === 'keyup') {
+			if ($this.val() === '') {
+          label.removeClass('active highlight');
+        } else {
+          label.addClass('active highlight');
+        }
+    } else if (e.type === 'blur') {
+    	if( $this.val() === '' ) {
+    		label.removeClass('active highlight'); 
+			} else {
+		    label.removeClass('highlight');   
+			}   
+    } else if (e.type === 'focus') {
+      
+      if( $this.val() === '' ) {
+    		label.removeClass('highlight'); 
+			} 
+      else if( $this.val() !== '' ) {
+		    label.addClass('highlight');
+			}
+    }
+
+});
+
+$('.tab a').on('click', function (e) {
+  
+  e.preventDefault();
+  
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  
+  target = $(this).attr('href');
+
+  $('.tab-content > div').not(target).hide();
+  
+  $(target).fadeIn(800);
+  
+});
+</script>
+
+
+	<!-- Footer -->
+	<div class="footer">
+
+		<!-- Copyright -->
+		<div class="copyright">
+			<p> &copy; 2018 All Rights Reserved | Design by IIIT Naya Raipur</p>
+		</div>
+		<!-- //Copyright -->
+
+	</div>
+	<!-- //Footer -->
+
+
+
+</body>
+<!-- //Body -->
+
+
+
+</html>
